@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Safety Resources</title>
+    <link rel="stylesheet" href="second.css">
+</head>
+<body>
+    <header>
+        <h1>Food Safety Resources</h1>
+    </header>
+
+    <main>
+        <section class="intro">
+            <img src="safety.png" alt="Food Safety Resources" class="intro-img">
+            <p class="intro-text">
+                Access our comprehensive food safety guides to ensure safe handling and distribution practices 
+                for donated food. It's crucial to follow proper safety protocols to minimize foodborne illnesses 
+                and protect the community.
+            </p>
+        </section>
+
+        <section class="resources">
+            <h2>Key Food Safety Resources</h2>
+            <div class="resource-container">
+                <!-- Temperature Control -->
+                <div class="resource-box">
+                    <div class="front">
+                        <img src="temp.webp" alt="Temperature Control" class="resource-image">
+                        <div class="overlay">
+                            <h3>Temperature Control</h3>
+                            <p>Keep perishable foods at safe temperatures to prevent bacteria growth.</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <p>Cold foods should be kept below 40°F (4°C) and hot foods above 140°F (60°C).</p>
+                    </div>
+                </div>
+
+                <!-- Proper Food Storage -->
+                <div class="resource-box">
+                    <div class="front">
+                        <img src="storefood.jpg" alt="Proper Food Storage" class="resource-image">
+                        <div class="overlay">
+                            <h3>Proper Food Storage</h3>
+                            <p>Store food items in clean, sealed containers to avoid contamination.</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <p>Avoid cross-contact with allergens and ensure freshness.</p>
+                    </div>
+                </div>
+
+                <!-- Personal Hygiene -->
+                <div class="resource-box">
+                    <div class="front">
+                        <img src="handwashing.jpg" alt="Personal Hygiene" class="resource-image">
+                        <div class="overlay">
+                            <h3>Personal Hygiene</h3>
+                            <p>Wash hands thoroughly before handling food to maintain cleanliness.</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <p>Use gloves when necessary for food handling.</p>
+                    </div>
+                </div>
+
+                <!-- Cleaning and Sanitizing -->
+                <div class="resource-box">
+                    <div class="front">
+                        <img src="regularlyclean.jpg" alt="Cleaning and Sanitizing" class="resource-image">
+                        <div class="overlay">
+                            <h3>Cleaning and Sanitizing</h3>
+                            <p>Regularly clean and sanitize all food preparation surfaces.</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <p>Ensure a safe environment by maintaining cleanliness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>If you're ready to schedule your first donation or need more information, feel free to contact us.</p>
+            <button class="contact-button">Get in Touch</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Second Serve | Committed to Safe Food Sharing</p>
+    </footer>
+
+    <!-- Flip Card Animation Script -->
+    <script>
+        document.querySelectorAll('.resource-box').forEach(box => {
+            box.addEventListener('click', () => {
+                box.classList.toggle('flip');
+            });
+        });
+    </script>
+</body>
+</html>

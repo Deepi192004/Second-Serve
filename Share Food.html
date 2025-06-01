@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Food - SecondServe</title>
+    <link rel="stylesheet" href="second.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <span>Contact: contact@secondserve.com | Phone: +123 456 7890</span>
+            </div>
+            <!-- Wrap the donate button with an anchor tag to link to share-food.html -->
+            <a href="share-food.html">
+                <button class="donate-btn">Donate Now</button>
+            </a>
+        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="Home.html"><img src="ss.webp" alt="SecondServe Logo" class="logo-img"></a>
+            </div>
+            <div class="logo-text">
+                <h3>Second Serve</h3>
+                <h4>Giving food a second chance before it is wasted</h4>
+            </div>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="Testimonials.html">Testimonials</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                <li><a href="Sign Up.html">Sign Up/Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Share Food Section -->
+    <section class="share-food">
+        <h2>Share Your Food</h2>
+        <p>Snap a photo of your food and share it with those in need.</p>
+        <form id="food-form">
+            <!-- Name Input -->
+            <label for="name"><i class="fas fa-user"></i> Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Food Description -->
+            <label for="food"><i class="fas fa-pizza-slice"></i> Food Description:</label>
+            <textarea id="food" name="food" rows="4" required></textarea>
+
+            <!-- Location Input -->
+            <label for="location"><i class="fas fa-map-marker-alt"></i> Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <!-- Contact Input -->
+            <label for="contact"><i class="fas fa-phone-alt"></i> Contact Information:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <!-- Camera Section -->
+            <div class="camera-container">
+                <video id="camera" width="100%" height="auto" autoplay></video>
+                <canvas id="canvas" style="display:none;"></canvas>
+                <button type="button" onclick="capturePhoto()"><i class="fas fa-camera-retro"></i> Capture Photo</button>
+                <img id="photo-preview" style="display:none; margin-top: 10px;" width="100%" />
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Food</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Quote -->
+            <div class="footer-logo-quote">
+                <div class="footer-logo-circle">
+                    <img src="ss.webp" alt="Second Serve Logo" class="footer-logo">
+                </div>
+                <p>"Giving surplus food a second chance, serving the community one meal at a time."</p>
+            </div>
+            <!-- Services Section -->
+            <div class="footer-links">
+                <h2>Services</h2>
+                <ul>
+                    <li><a href="food rescue.html"><i class="fas fa-warehouse"></i> Food Rescue & Redistribution</a></li>
+                    <li><a href="community engagement.html"><i class="fas fa-people-arrows"></i> Community Engagement</a></li>
+                    <li><a href="volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer Opportunities</a></li>
+                    <li><a href="donation scheduling.html"><i class="fas fa-calendar-alt"></i> Donation Scheduling</a></li>
+                    <li><a href="awareness campaigns.html"><i class="fas fa-bullhorn"></i> Awareness Campaigns</a></li>
+                </ul>
+            </div>
+            <!-- Explore Links -->
+            <div class="footer-links">
+                <h2>Explore</h2>
+                <ul>
+                    <li><a href="Home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="About.html"><i class="fas fa-users"></i> About Us</a></li>
+                    <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                    <li><a href="Share Food.html"><i class="fas fa-hand-holding-heart"></i> Share Food</a></li>
+                    <li><a href="Request Food.html"><i class="fas fa-utensils"></i> Request Food</a></li>
+                    <li><a href="Testimonials.html"><i class="fas fa-comments"></i> Testimonials</a></li>
+                    <li><a href="Contact Us.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    <li><a href="Sign Up.html"><i class="fas fa-sign-in-alt"></i> Sign Up / Login</a></li>
+                </ul>
+            </div>
+            <!-- Contact Us and Stay Connected -->
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <p><i class="fas fa-envelope"></i> Email: <a
+                        href="mailto:support@secondserve.com">support@secondserve.com</a></p>
+                <p><i class="fas fa-phone"></i> Phone: <a href="tel:+1234567890">+1 234 567 890</a></p
+                <!-- Stay Connected Social Icons -->
+                <div class="stay-connected">
+                    <h2>Stay Connected</h2>
+                    <div class="social-icons">
+                        <a href="#" class="social-circle"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Second Serve | All rights reserved | Made with ❤ for the community</p>
+        </div>
+    </footer>
+
+    <!-- Script for Camera Functionality -->
+    <script>
+        // Access the camera and start the video stream
+        const video = document.getElementById("camera");
+        const canvas = document.getElementById("canvas");
+        const photoPreview = document.getElementById("photo-preview");
+
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then((stream) => {
+                video.srcObject = stream;
+            })
+            .catch((err) => {
+                console.log("Error: " + err);
+            });
+
+        // Function to capture the photo from the video
+        function capturePhoto() {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            canvas.getContext("2d").drawImage(video, 0, 0);
+            
+            // Show the captured image
+            const dataUrl = canvas.toDataURL("image/png");
+            photoPreview.src = dataUrl;
+            photoPreview.style.display = "block";
+        }
+
+        // Submit button logic (if needed)
+        document.getElementById("food-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you for donating your food!");
+        });
+    </script>
+</body>
+
+</html>
